@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>둥근 테두리 테스트</title>
+
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/table.css" media="screen" />
+
+
+<style>
+	body{width:800px;margin:0 auto;position:relative;}
+	caption{font-size:14px;height:auto;line-height:1.6;position:absolute;text-indent:0;top:-20px;visibility:visible;width:100%;}
+</style>
+
+</head>
+<body>
+
+<h1>자바스크립트를 사용하지 않고 이미지와 CSS만을 사용해서 만든 둥근형태의 테이블 입니다.</h1>
+
+<!-- <div class="test1">test 1</div> -->
+<br />
+<br />
+<br />
+
+<div class="table_wrap clearfix">
+	<div class="table_top_left radius_05 radius_gray_01"></div><div class="table_top_right radius_05 radius_gray_01"></div>
+	<div class="table_inner clearfix">
+		<table class="table_col" summary="설명" cellpadding="0">
+			<caption>테이블 상단, 하단 둥근 테두리 5px</caption>
+			<colgroup>
+				<col style="width:10%" />
+				<col style="width:15%" />
+				<col style="width:15%" />
+				<col style="width:25%" />
+				<col style="width:25%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_left bd_right bd_bottom" rowspan="2">제목01</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목02</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목03</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목04</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목05</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목06</th>
+				</tr>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목07</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목08</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목09</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목10</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목11</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용12</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용13</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용14</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용15</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용16</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용17</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용18</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_bottom bd_right">내용24</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="table_bottom_left radius_05 radius_gray_01"></div><div class="table_bottom_right radius_05 radius_gray_01"></div>
+	</div>
+</div>
+
+
+
+<br />
+<br />
+<br />
+
+
+
+
+<div class="table_wrap clearfix">
+	<div class="table_top_left radius_10 radius_gray_01"></div><div class="table_top_right radius_10 radius_gray_01"></div>
+	<div class="table_inner clearfix">
+		<table class="table_col" summary="설명" cellpadding="0">
+			<caption>테이블 하단 둥글지 않음. 10px</caption>
+			<colgroup>
+				<col style="width:10%" />
+				<col style="width:15%" />
+				<col style="width:15%" />
+				<col style="width:25%" />
+				<col style="width:25%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_left bd_right bd_bottom" rowspan="2">제목01</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목02</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목03</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목04</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목05</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목06</th>
+				</tr>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목07</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목08</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목09</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목10</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목11</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용12</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용13</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용14</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용15</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용16</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용17</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용18</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용24</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- <div class="table_bottom_left radius_10 radius_gray_01"></div><div class="table_bottom_right radius_10 radius_gray_01"></div> -->
+	</div>
+</div>
+
+<br />
+<br />
+<br />
+
+
+
+<div class="table_wrap clearfix">
+	<div class="table_top_left radius_20 radius_gray_01"></div><div class="table_top_right radius_20 radius_gray_01"></div>
+	<div class="table_inner clearfix">
+		<table class="table_col" summary="설명" cellpadding="0">
+			<caption>테이블 상단, 하단 둥근 테두리 20px</caption>
+			<colgroup>
+				<col style="width:10%" />
+				<col style="width:15%" />
+				<col style="width:15%" />
+				<col style="width:25%" />
+				<col style="width:25%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_left bd_right bd_bottom" rowspan="2">제목01</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목02</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목03</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목04</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목05</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목06</th>
+				</tr>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목07</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목08</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목09</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목10</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목11</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용12</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용13</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용14</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용15</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용16</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용17</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용18</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용24</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="table_bottom_left radius_20 radius_gray_01"></div><div class="table_bottom_right radius_20 radius_gray_01"></div>
+	</div>
+</div>
+
+<br />
+<br />
+<br />
+
+
+
+<div class="table_wrap clearfix">
+	<div class="table_top_left radius_03 radius_gray_01"></div><div class="table_top_right radius_03 radius_gray_01"></div>
+	<div class="table_inner clearfix">
+		<table class="table_col" summary="설명" cellpadding="0">
+			<caption>테이블 하단 둥글지 않음. 3px</caption>
+			<colgroup>
+				<col style="width:10%" />
+				<col style="width:15%" />
+				<col style="width:15%" />
+				<col style="width:25%" />
+				<col style="width:25%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_left bd_right bd_bottom" rowspan="2">제목01</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목02</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목03</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목04</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목05</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_top_01 bd_right bd_bottom">제목06</th>
+				</tr>
+				<tr>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목07</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목08</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목09</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목10</th>
+					<th scope="col" class="bd_gray_01 bg_gray_01 bd_right bd_bottom">제목11</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용12</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용13</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용14</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용15</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용16</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용17</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용18</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+				<tr>
+					<td class="bd_gray_01 bd_left bd_right bd_bottom">내용24</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+					<td class="bd_gray_01 bd_right bd_bottom">내용</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- <div class="table_bottom_left radius_03 radius_gray_01"></div><div class="table_bottom_right radius_03 radius_gray_01"></div> -->
+	</div>
+</div>
+
+<br />
+<br />
+<br />
+
+	<!-- blue style -->
+	<table class="table_col table_blue" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<thead>
+			<tr>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bg_blue_02 bd_blue_01">제목</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="odd">
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr class="even">
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr class="odd">
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+<br />
+<br />
+<br />
+
+	<table class="table_row table_blue" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<tbody>
+			<tr>
+				<th scope="row" class="bd_top_02 bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<td class="bd_top_02 bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_top_02 bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+<br />
+<br />
+<br />
+
+
+	<!-- colspan blue -->
+	<table class="table_col table_blue" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<thead>
+			<tr>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bg_blue_02 bd_blue_01">제목</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_right bd_blue_01" colspan="2">내용</td>
+				<!-- <td>내용</td> -->
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+<br />
+<br />
+<br />
+
+
+	<table class="table_row table_blue" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<tbody>
+			<tr>
+				<th scope="row" class="bd_top_02 bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<td class="bd_top_02 bd_bottom bd_right bd_blue_01">내용</td>
+				<td class="bd_top_02 bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<td class="bd_bottom bd_right bd_blue_01" rowspan="2">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_right bg_blue_02 bd_blue_01">제목</th>
+				<!-- <td>내용</td> -->
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+<br />
+<br />
+<br />
+
+
+
+
+	<!-- yellow style -->
+	<table class="table_col table_yellow" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<thead>
+			<tr>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bg_yellow_01 bd_yellow_01">제목</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+<br />
+<br />
+<br />
+
+
+	<table class="table_row table_yellow" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<tbody>
+			<tr>
+				<th scope="row" class="bd_top_02 bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<td class="bd_top_02 bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_top_02 bd_bottom bd_yellow_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_yellow_01 bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_yellow_01 bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+<br />
+<br />
+<br />
+
+
+
+	<!-- colspan yellow -->
+	<table class="table_col table_yellow" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<thead>
+			<tr>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<th scope="col" class="bd_top_02 bd_bottom bg_yellow_01 bd_yellow_01">제목</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_right bd_yellow_01" colspan="2">내용</td>
+				<!-- <td>내용</td> -->
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+<br />
+<br />
+<br />
+
+
+	<table class="table_row table_yellow" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<tbody>
+			<tr>
+				<th scope="row" class="bd_top_02 bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<td class="bd_top_02 bd_bottom bd_right bd_yellow_01">내용</td>
+				<td class="bd_top_02 bd_bottom bd_yellow_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<td class="bd_bottom bd_right bd_yellow_01" rowspan="2">내용</td>
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bd_bottom bd_right bg_yellow_01 bd_yellow_01">제목</th>
+				<!-- <td>내용</td> -->
+				<td class="bd_bottom bd_yellow_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+	
+
+<br />
+<br />
+<br />
+
+
+
+
+
+	<!-- white style -->
+	<table class="table_col table_white" summary="설명" cellpadding="0">
+		<caption class="v_hidden">요약</caption>
+		<thead>
+			<tr>
+				<th scope="col" class="table_blue bd_top_01 bd_bottom bd_right bd_blue_01">제목</th>
+				<th scope="col" class="table_blue bd_top_01 bd_bottom bd_right bd_blue_01">제목</th>
+				<th scope="col" class="table_blue bd_top_01 bd_bottom bd_blue_01">제목</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="bd_bottom bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+			<tr>
+				<td class="bd_bottom bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+				<td class="bd_bottom bd_blue_01">내용</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+<br />
+<br />
+<br />
+
+
+
+
+
+
+<!-- SublimeText RiveReload Javscript -->
+<script type="text/javascript">
+	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+
+</body>
+</html>

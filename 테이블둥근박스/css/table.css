@@ -1,0 +1,106 @@
+table{width:100%;border:none;margin:0;}
+.table_col, .table_row{border-spacing:0;border-collapse:collapse;font-family:dotum,"돋움",dotumche,"돋움체", sans-serif;font-size:12px;line-height:1.6;}
+th,td{text-align:center;}
+
+table .bd_top_01{border-top-style:solid;border-top-width:1px;}
+table .bd_top_02{border-top-style:solid;border-top-width:2px;}
+table .bd_bottom{border-bottom-style:solid;border-bottom-width:1px;}
+table .bd_right{border-right-style:solid;border-right-width:1px;}
+table .bd_left{border-left-style:solid;border-left-width:1px;}
+
+table .bd_top_none{border-top:none;}
+table .bd_right_none{border-right:none;}
+table .bd_left_none{border-left:none;}
+table .bd_bottom_none{border-bottom:none;}
+
+table .bd_style_dot{border-style:dotted;}
+table .bd_tstyle_dot{border-top-style:dotted;}
+table .bd_bstyle_dot{border-bottom-style:dotted;}
+table .bd_lstyle_dot{border-left-style:dotted;}
+table .bd_rstyle_dot{border-right-style:dotted;}
+
+table.table_blue{color:#376EC6;}
+table.table_yellow{color:#62A459;}
+table.table_white{color:#333;}
+
+table tr.odd td{background-color:#ccc;}
+table tr.even td{background-color:#eee;}
+
+/* 둥근형태 이미지사용 테이블 */
+.table_wrap{position:relative;}
+.table_wrap .table_top_left{position:absolute;top:0;left:0;}
+.table_wrap .table_top_right{position:absolute;top:0;right:0;}
+.table_wrap .table_bottom_left{position:absolute;bottom:0;left:0;}
+.table_wrap .table_bottom_right{position:absolute;bottom:0;right:0;}
+
+/* th,td 패딩영역에 따라 height 값이 달라짐. */
+th{padding:10px;} /* 가변 */
+td{padding:10px;} /* 가변 */
+
+/*	테이블 보더 - 계속 추가하세요.
+--------------------------------------------------------------------------------------
+	테이블 보더 색상과 radius정도에 따른 스타일을 psd이용 하여 이미지 생성 후 추가
+--------------------------------------------------------------------------------------
+*/
+.table_wrap .radius_03{width:3px;height:3px;}
+.table_wrap .radius_05{width:5px;height:5px;}
+.table_wrap .radius_10{width:10px;height:10px;}
+.table_wrap .radius_20{width:20px;height:20px;}
+
+/* radius 3px 보더 gray */
+.table_wrap .table_top_left.radius_03.radius_gray_01{background:url(../img/table_gray_01_radius_03.png) no-repeat top left;}
+.table_wrap .table_top_right.radius_03.radius_gray_01{background:url(../img/table_gray_01_radius_03.png) no-repeat top right;}
+.table_wrap .table_bottom_left.radius_03.radius_gray_01{background:url(../img/table_gray_01_radius_03.png) no-repeat bottom left;}
+.table_wrap .table_bottom_right.radius_03.radius_gray_01{background:url(../img/table_gray_01_radius_03.png) no-repeat bottom right;}
+
+/* radius 5px 보더 gray */
+.table_wrap .table_top_left.radius_05.radius_gray_01{background:url(../img/table_gray_01_radius_05.png) no-repeat top left;}
+.table_wrap .table_top_right.radius_05.radius_gray_01{background:url(../img/table_gray_01_radius_05.png) no-repeat top right;}
+.table_wrap .table_bottom_left.radius_05.radius_gray_01{background:url(../img/table_gray_01_radius_05.png) no-repeat bottom left;}
+.table_wrap .table_bottom_right.radius_05.radius_gray_01{background:url(../img/table_gray_01_radius_05.png) no-repeat bottom right;}
+
+/* radius 10px 보더 gray */
+.table_wrap .table_top_left.radius_10.radius_gray_01{background:url(../img/table_gray_01_radius_10.png) no-repeat top left;}
+.table_wrap .table_top_right.radius_10.radius_gray_01{background:url(../img/table_gray_01_radius_10.png) no-repeat top right;}
+.table_wrap .table_bottom_left.radius_10.radius_gray_01{background:url(../img/table_gray_01_radius_10.png) no-repeat bottom left;}
+.table_wrap .table_bottom_right.radius_10.radius_gray_01{background:url(../img/table_gray_01_radius_10.png) no-repeat bottom right;}
+
+/* radius 20px 보더 gray */
+.table_wrap .table_top_left.radius_20.radius_gray_01{background:url(../img/table_gray_01_radius_20.png) no-repeat top left;}
+.table_wrap .table_top_right.radius_20.radius_gray_01{background:url(../img/table_gray_01_radius_20.png) no-repeat top right;}
+.table_wrap .table_bottom_left.radius_20.radius_gray_01{background:url(../img/table_gray_01_radius_20.png) no-repeat bottom left;}
+.table_wrap .table_bottom_right.radius_20.radius_gray_01{background:url(../img/table_gray_01_radius_20.png) no-repeat bottom right;}
+
+/*	컬러값. - 계속 추가하세요.
+--------------------------------------------------------------------------------------
+	table border 색상 
+--------------------------------------------------------------------------------------
+*/
+.bd_blue_01{border-color:#B0CEEC;}
+
+.bd_yellow_01{border-color:#A1C484;}
+
+.bd_gray_01{border-color:#c1c1c1;}
+
+/*	컬러값. - 계속 추가하세요.
+--------------------------------------------------------------------------------------
+	table bg 색상
+	색상 추가시에 box.css에서 box bg에도 똑같이 추가해야 합니다.
+--------------------------------------------------------------------------------------
+*/
+.bg_gray_01{background-color:#e1e1e1;}
+.bg_gray_02{background-color:#d1d1d1;}
+.bg_gray_03{background-color:#f0f0f0;}
+
+.bg_orange_01{background-color:#FFA500;}
+
+.bg_green_01{background-color:#008000;}
+
+.bg_blue_01{background-color:#0000ff;}
+.bg_blue_02{background-color:#E8F4FC;}
+
+.bg_yellow_01{background-color:#EFF5EA;}
+
+.bg_red_01{background-color:#ff0000;}
+
+.bg_silver_01{background-color:#3f3f3f;}

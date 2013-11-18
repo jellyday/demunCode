@@ -1,0 +1,24 @@
+/* html 엘리먼트 속성 초기화 */
+h1, h2, h3, h4, h5, h6{font-size:1em; margin:0px;}
+p, ul, ol, li, dl, dt, dd, form, fieldset{margin:0px; padding:0px; font-size:100%;}
+ul, ol, li{list-style:none; font-size:100%;}
+table{border-collapse:collapse; font-size:100%;}
+legend {visibility:hidden;overflow:hidden;width:0;height:0;background-color:transparent;font-size:0;line-height:0;}
+caption {visibility:hidden;overflow:hidden;width:0;height:0;background-color:transparent;font-size:0;line-height:0;text-indent: -9999em;}
+img{border:0px none; font-size:0px; line-height:0px;}
+input, select, textarea{margin:0px; padding:0px;}
+
+/* 그외 초기화 */
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+header, hgroup, footer ,nav ,section ,article ,aside ,figure ,video ,audio {margin:0;padding:0;border:0;}
+em, address{font-style:normal}
+hr{display:none}
+
+select, textarea, input, label,img,button{vertical-align:middle}
+table td{word-wrap:break-word;word-break:break-all;}
+button{cursor:pointer}
