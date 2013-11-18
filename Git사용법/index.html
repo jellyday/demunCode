@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>git 사용법</title>
+	<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<h1>git</h1>
+		<p>git 설치 : <a href="http://code.google.com/p/msysgit/downloads/list?can=3">windows 버젼설치</a></p>
+		<p>저장소 만들기 : 해당폴더안에서 <code>git init</code></p>
+		<p>저장소 복제 : <code>code clone /로컬/저장소/경로</code></p>
+		<h2>원격저장소 사용하는 순서.</h2>
+		<p>git 설치 -> 원격저장소에서 ssh 키 발행 -> 원격저장소 생성 -> 로컬에서 원격저장소 clone -> 파일및폴더생성, <code>git add 파일이름</code> , <code>git commit -m '커밋에대한내용'</code> , <code>git pull origin master</code> (원격저장소별명)(원격저장소 브렌치) 해서 원격저장소와 로컬저장소 병합 -> <code>git push origin master</code> 원격저장소 브렌치 전송</p>
+		<h3>commit : 추가와 확정</h3>
+		<p>변경된 파일 인덱스에 추가 : <code>git add filename</code> or <code>git add *</code></p>
+		<p>변경된 내용을 확정하려면 : <code>git commit -m "확정본에 대한 설명"</code> 그러면 HEAD에 반영됨.(원격저장소에는 반영안됨)</p>
+		<h3>발행 : push</h3>
+		<p>변경된 내용발행하기 : <code>git push origin master</code> 이 명령을 내리면 원격서버로 올라감.</p>
+		<p>원격저장소에서 복제한것이 아니라면 원격서버주소를 git에게 알려줘야함. <code>git remote add origin 원격서버주소</code></p>
+		<p>만약 로그인하지 않았다면 원격서버에 올리면 아이디와 비밀번호를 물어옴.</p>
+		<h3>branch : 가지치기</h3>
+		<p>새로운 저장소를 만들면 기본으로 master 가지가 만들어짐. 가지는 안전하게 격리된 상태에서 작업할때 사용, 차후 변합이 가능함</p>
+		<p>새로운 가지(branch_x)를 만들고 갈아탑니다. <code>git checkout -b branch_x</code></p>
+		<p>master 로 돌아가려면 <code>git checkout master</code></p>
+		<p>가지를 삭제하려면 : <code>git branch -d branch_x</code></p>
+		<h3>merge : 갱신과 병합</h3>
+		<p>로컬저장소를 원격저장소에 맞쳐 갱신하려면 : <code>git pull</code></p>
+		<p>다른가지에 있는 변경내용을 현재가지에 병합하려면 : <code>git merge 가지이름</code></p>
+		<p>첫번째든 두번째든 git 은 자동으로 병합(merge)을 시도함. 가끔 충돌(conflicts)이 일어남.직접 병합시도해야 됨. </p>
+		<p>충돌했다면 병합하라고 : <code>git add 파일이름</code></p>
+		<p>병합하기전 변경된 내용을 비교하려면 : <code>git diff 원래가지 비교대상가지</code></p>
+		<h3>tag : 꼬리표 달기</h3>
+		<p>태그뒤에 식별자(고유해야 됨)를 붙여야 함 식별자를 얻으려면 <code>git log</code> 를 통해 얻을수 있음</p>
+		<p>꼬리표를 달려면 <code>git tag 1.0.0 1b2e1d63ff</code> 뒤에 1b2e1d63ff 가 확정본 식별자 임</p>
+		<h3>되돌리기</h3>
+		<p>실수한경우 로컬의 내용을 되될릴수있다 : <code>git checkout --파일이름</code> 이것은 변경전상태(HEAD)로 되돌림. 인덱스에 추가된 내용과 새로 생성한 파일은 그대로 남음.</p>
+		<p>로컬의 있는 모든 변경 내용과 확정본을 포기하고, 원격저장소의 최신이력을 가지고 오고, 로컬 master가지가 저 이력을 가리키도록 할려면 : <code>git fetch origin</code> <br> <code>git reset --hard origin/master</code></p>
+		<h3>기타</h3>
+		<p>윈도우에서 git output 컬러로 출력하기 : <code>git config color.ui true</code></p>
+		<p>파일을 추가할때 대화식으로 추가하기 : <code>git add -i</code></p>
+		<br><br>
+		<p><a href="http://rogerdudler.github.io/git-guide/index.ko.html">git 한글안내서</a></p>
+	</div>
+</div>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
