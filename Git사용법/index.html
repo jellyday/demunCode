@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>git 사용법</title>
 	<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://github.com/demun/demunCode/blob/master/Git사용법/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
@@ -16,6 +16,14 @@
 		<p>저장소 복제 : <code>code clone /로컬/저장소/경로</code></p>
 		<h2>원격저장소 사용하는 순서.</h2>
 		<p>git 설치 -> 원격저장소에서 ssh 키 발행 -> 원격저장소 생성 -> 로컬에서 원격저장소 clone -> 파일및폴더생성, <code>git add 파일이름</code> , <code>git commit -m '커밋에대한내용'</code> , <code>git pull origin master</code> (원격저장소별명)(원격저장소 브렌치) 해서 원격저장소와 로컬저장소 병합 -> <code>git push origin master</code> 원격저장소 브렌치 전송</p>
+		<h3>ssh 키 생성하는 방법.</h3>
+		<ul class="list-group">
+			<li class="list-group-item">콘솔창에서 ssh-keygen 입력</li>
+			<li class="list-group-item">위에서 경로확인 예: cd /c/Users/컴퓨터이름/.ssh/ 하고 엔터</li>
+			<li class="list-group-item">cat id_rsa.pub 엔터</li>
+			<li class="list-group-item">나오는 코드를 복사</li>
+			<li class="list-group-item">github 사이트에서 SSH Keys를 붙여넣기해서 생성</li>
+		</ul>
 		<h3>commit : 추가와 확정</h3>
 		<p>변경된 파일 인덱스에 추가 : <code>git add filename</code> or <code>git add *</code></p>
 		<p>변경된 내용을 확정하려면 : <code>git commit -m "확정본에 대한 설명"</code> 그러면 HEAD에 반영됨.(원격저장소에는 반영안됨)</p>
