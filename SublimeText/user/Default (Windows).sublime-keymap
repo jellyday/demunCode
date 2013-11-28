@@ -1,0 +1,4 @@
+[
+	{ "keys": ["ctrl+shift+c"], "command": "open_in_browser" }, // 현재파일을 새창으로 여는 단축키
+	{ "keys": ["ctrl+shift+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}} // 코드를 한줄로 배열하는 토글 단축키
+]
