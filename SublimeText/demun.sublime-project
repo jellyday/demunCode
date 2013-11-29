@@ -1,0 +1,51 @@
+{
+	"folders":
+	[
+		{
+			"path": "/E/Dev",
+			"name": "E:Dev",
+			"file_exclude_patterns":[ // 안보여야하는 파일
+				//".git*",
+				".hta*",
+				"*.ico",
+				"*.png",
+				"*.jpg",
+				"*.gif",
+				"*.svg",
+				"*.eot",
+				"*.ttf",
+				"*.woff",
+				//"*.md",
+				"*.zip",
+				"*.rar",
+				"*.swf"
+			],
+			"folder_exclude_patterns":[
+				"testFolder" // 안보여야되는 폴더.
+			]
+		},
+		{
+			"path": "/E/Work",
+			"name": "E:Work",
+			"file_exclude_patterns":[ // 안보여야하는 파일
+				//".git*",
+				".hta*",
+				"*.ico",
+				"*.png",
+				"*.jpg",
+				"*.gif",
+				"*.svg",
+				"*.eot",
+				"*.ttf",
+				"*.woff",
+				//"*.md",
+				"*.zip",
+				"*.rar",
+				"*.swf"
+			],
+			"folder_exclude_patterns":[
+				"testFolder" // 안보여야되는 폴더.
+			]
+		}
+	]
+}
