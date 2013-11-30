@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="ko" class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko" class="no-js modern"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /><![endif]-->
+	<title>Document</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<style>
+		body { padding-top: 70px; }
+		#sidebar { width: 300px; }
+		#content { margin-left: 300px; }
+	</style>
+	<!--[if lt IE 9]>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">당신은 오래된 브라우져를 사용하고 있습니다. 사이트의 향상된 기능을 사용하기 위해 <a href="http://browsehappy.com/">브라우져를 업그레이드</a> 하시거나 <a href="http://www.google.com/chromeframe/?redirect=true">구글 크롬 프레임</a>를 업데이트 하세요.</p>
+<![endif]-->
+<!-- start fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top">
+	<!-- <div class="container"> -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">ProjectName</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#about">메뉴 2</a></li>
+				<li><a href="#contact">메뉴 3</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">list1</a></li>
+						<li><a href="#">list2</a></li>
+						<li><a href="#">link3</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Nav header</li>
+						<li><a href="#">list1</a></li>
+						<li><a href="#">list2</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/">right-menu</a></li>
+				<li><a href="/">right-menu</a></li>
+				<li class="active"><a href="/">right-menu</a></li>
+			</ul>
+		</div>
+	<!-- </div> -->
+</div>
+<!-- end navbar -->
+<!-- start main -->
+<div id="main">
+	<div id="sidebar">
+		<div class="panel-group" id="accordion-sb">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-01">collapse-01</a>
+					</h4>
+				</div>
+				<div id="collapse-01" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-02">
+						collapse-02</a>
+					</h4>
+				</div>
+				<div id="collapse-02" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-03">collapse-03</a>
+					</h4>
+				</div>
+				<div id="collapse-03" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-04">collapse-04</a>
+					</h4>
+				</div>
+				<div id="collapse-04" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-05">collapse-05</a>
+					</h4>
+				</div>
+				<div id="collapse-05" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-06">collapse-06</a>
+					</h4>
+				</div>
+				<div id="collapse-06" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-07">collapse-07</a>
+					</h4>
+				</div>
+				<div id="collapse-07" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-08">collapse-08</a>
+					</h4>
+				</div>
+				<div id="collapse-08" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-09">collapse-09</a>
+					</h4>
+				</div>
+				<div id="collapse-09" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="accordion-sb" href="#collapse-10">collapse-10</a>
+					</h4>
+				</div>
+				<div id="collapse-10" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="list-group">
+							<a href="javascript:;" class="list-group-item">item01</a>
+							<a href="javascript:;" class="list-group-item">item02</a>
+							<a href="javascript:;" class="list-group-item">item03</a>
+							<a href="javascript:;" class="list-group-item">item04</a>
+							<a href="javascript:;" class="list-group-item">item05</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- end sidebar -->
+	<div id="content"></div>
+	<!-- end content -->
+</div>
+<!-- end main -->
+<hr class="featurette-divider">
+<!-- end footer 1 -->
+<footer>
+	<div class="col-md-12">
+		<p class="pull-left copy">Copyright &copy; 2013 | <a href="#">Your Site</a></p>
+		<p class="pull-right"> &middot; <a href="#">link</a> &middot; <a href="#">link</a></p>
+	</div>
+</footer> 	
+<!-- end footer 1 -->
+<!-- start footer2 -->
+<!-- <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p class="copy">Copyright &copy; 2013 | <a href="#">Your Site</a></p>
+				<p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			</div>
+		</div>
+	</div>
+</footer> 	 -->
+<!-- end footer 2 -->
+<!-- script -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jQuery -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script><!-- Bootstrap -->
+</body>
+</html>
