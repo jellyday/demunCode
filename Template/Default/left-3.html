@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="ko" class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko" class="no-js modern"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /><![endif]-->
+	<title>git 사용법</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<style>
+		body { font-family: 나눔고딕,맑은고딕,돋음; padding-top: 52px; background: #333; }
+		#left { position: relative; float: left; width: 200px; padding: 0; background: #333; }
+		#left ul { list-style: none; padding: 0; margin: 0; }
+		#left li { line-height: 1.6; }
+		#left li a { padding: 10px; display: block; border-bottom: 1px solid #444; border-top: 1px solid #222; color: #aaa; text-decoration: none; }
+		#left li a:hover, #left li a.on { background: #222; }
+		#left li:first-child a { border-top: none; }
+		#right { position: relative; margin-left: 200px; }
+
+		#container .panel { display: none; }
+		#container .open-panel { display: block; }
+
+		#container { width: 100%; }
+		footer { color: #ccc; }
+	</style>
+	<!--[if lt IE 9]>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">당신은 오래된 브라우져를 사용하고 있습니다. 사이트의 향상된 기능을 사용하기 위해 <a href="http://browsehappy.com/">브라우져를 업그레이드</a> 하시거나 <a href="http://www.google.com/chromeframe/?redirect=true">구글 크롬 프레임</a>를 업데이트 하세요.</p>
+<![endif]-->
+<div id="left">
+	<ul>
+		<li><a class="panel01" href="#panel01">default panel01</a></li>
+		<li><a class="panel02" href="#panel02">success panel02</a></li>
+		<li><a class="panel03" href="#panel03">info panel03</a></li>
+		<li><a class="panel04" href="#panel04">warning panel04</a></li>
+		<li><a class="panel05" href="#panel05">danger panel05</a></li>
+		<li><a class="panel06" href="#panel06">primary panel06</a></li>
+		<li><a class="panel07" href="#panel07">panel07</a></li>
+		<li><a class="panel08" href="#panel08">panel08</a></li>
+		<li><a class="panel09" href="#panel08">panel09</a></li>
+		<li><a class="panel10" href="#panel10">panel10</a></li>
+	</ul>
+</div>
+<div id="right">
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">demunCode</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#about">메뉴 2</a></li>
+					<li><a href="#contact">메뉴 3</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">list1</a></li>
+							<li><a href="#">list2</a></li>
+							<li><a href="#">link3</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Nav header</li>
+							<li><a href="#">list1</a></li>
+							<li><a href="#">list2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/">right-menu</a></li>
+					<li><a href="/">right-menu</a></li>
+					<li class="active"><a href="/">right-menu</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar -->
+	<div id="container" class="container">
+		<div class="row">
+			<div class="content">
+				<div class="open-panel panel panel-default" id="panel01">
+					<div class="panel-heading">default panel01</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>
+					</div>
+				</div>
+				<div class="panel panel-success" id="panel02">
+					<div class="panel-heading">success panel02</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-info" id="panel03">
+					<div class="panel-heading">info panel03</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-warning" id="panel04">
+					<div class="panel-heading">warning panel04</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-danger" id="panel05">
+					<div class="panel-heading">danger panel05</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-primary" id="panel06">
+					<div class="panel-heading">primary panel06</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-default" id="panel07">
+					<div class="panel-heading">panel07</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-default" id="panel08">
+					<div class="panel-heading">panel08</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-default" id="panel09">
+					<div class="panel-heading">panel09</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+				<div class="panel panel-default" id="panel10">
+					<div class="panel-heading">panel10</div>
+					<div class="panel-body">
+						<p><em>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다.</em> <strong>사는곳 안드로메다. 직업 개념수집. 게시글 지구인들이어 개념 항상 감사합니다.</strong> 국가는 평생교육을 진흥하여야 한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 모든 국민은 인간다운 생활을 할 권리를 가진다. 모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다. 모든 국민은 통신의 비밀을 침해받지 아니한다. 교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. </p>
+
+						<p>공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다. 국회는 헌법 또는 법률에 특별한 규정이 없는 한 재적의원 과반수의 출석과 출석의원 과반수의 찬성으로 의결한다. 가부동수인 때에는 부결된 것으로 본다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다. 언론·출판은 타인의 명예나 권리 또는 공중도덕이나 사회윤리를 침해하여서는 아니된다. 국민의 모든 자유와 권리는 국가안전보장, 질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다 <strong>근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</strong> 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. </p>  
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr class="featurette-divider">
+	<!-- end footer 1 -->
+	<footer>
+		<div class="col-md-12">
+			<p class="pull-left copy">Copyright &copy; 2013 | <a href="#">Your Site</a></p>
+			<p class="pull-right"> &middot; <a href="#">link</a> &middot; <a href="#">link</a></p>
+		</div>
+	</footer> 	
+	<!-- end footer 1 -->
+</div>
+
+
+
+
+<!-- script -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jQuery -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script><!-- Bootstrap -->
+<script>
+	(function($){
+		$(document).ready(function() {
+			$('#left ul li a').on('click', function() {
+				var idx = $(this).attr('class').substring(5);
+				$(this).parent().siblings().find('a').removeClass('on');
+				$(this).addClass('on');
+				$('.panel').slideUp(0);
+				$('#panel' + idx).slideDown(200);
+			});
+		});
+
+	})(jQuery)
+</script>
+</body>
+</html>
