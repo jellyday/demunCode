@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>선택하기</title>
+</head>
+<body>
+<div id="container">
+	<div class="content">
+		<h1>getElementsByTagName()</h1>
+		<p>전체문서에서 태그이름이 div인 Element Node 찾기</p>
+	</div>
+	<div class="sidebar"></div>
+	<div id="result">결과가 출력되는 곳</div>
+</div>
+<script>
+	window.onload = function(){
+
+		// div 태그를 찾아 divs 에 담는다.
+		var divs = window.document.getElementsByTagName('div');
+
+		// 결과를 출력하기 위해 result 도 변수에 담는다.
+		var result = window.document.getElementById('result');
+
+		// 찾은 갯수는 length 메서드로 알 수 있다.
+		result.innerHTML = '전체 div 엘리먼트 갯수는 : ' + divs.length;
+
+		// 결과 -> 전체 div 엘리먼트 갯수는 : 4
+	}
+</script>
+</body>
+</html>
