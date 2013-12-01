@@ -1,60 +1,185 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="ko" class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko" class="no-js modern"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /><![endif]-->
 	<title>git 사용법</title>
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<style>
+		body { font-family: 나눔고딕,맑은고딕,돋음; padding-top: 50px; background: #333; }
+		#left { position: relative; float: left; width: 200px; padding: 0; background: #333; }
+		#left ul { list-style: none; padding: 0; margin: 0; }
+		#left li { line-height: 1.6; }
+		#left li a { padding: 10px; display: block; border-bottom: 1px solid #444; border-top: 1px solid #222; text-decoration: none; }
+		#left li a:hover, #left li a.on { background: #222; }
+		#left li:first-child a { border-top: none; }
+		#right { position: relative; margin-left: 200px; }
+
+		#container .panel { display: none; }
+		#container .open-panel { display: block; }
+
+		#container { width: 100%; }
+	</style>
+	<!--[if lt IE 9]>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+	<![endif]-->
 </head>
 <body>
-<div class="container">
-	<div class="row">
-		<h1>git</h1>
-		<p>git 설치 : <a href="http://code.google.com/p/msysgit/downloads/list?can=3">windows 버젼설치</a></p>
-		<p>저장소 만들기 : 해당폴더안에서 <code>git init</code></p>
-		<p>저장소 복제 : <code>code clone /로컬/저장소/경로</code></p>
-		<h2>원격저장소 사용하는 순서.</h2>
-		<p>git 설치 -> 원격저장소에서 ssh 키 발행 -> 원격저장소 생성 -> 로컬에서 원격저장소 clone -> 파일및폴더생성, <code>git add 파일이름</code> , <code>git commit -m '커밋에대한내용'</code> , <code>git pull origin master</code> (원격저장소별명)(원격저장소 브렌치) 해서 원격저장소와 로컬저장소 병합 -> <code>git push origin master</code> 원격저장소 브렌치 전송</p>
-		<h3>ssh 키 생성하는 방법.</h3>
-		<ul class="list-group">
-			<li class="list-group-item">콘솔창에서 ssh-keygen 입력</li>
-			<li class="list-group-item">위에서 경로확인 예: cd /c/Users/컴퓨터이름/.ssh/ 하고 엔터</li>
-			<li class="list-group-item">cat id_rsa.pub 엔터</li>
-			<li class="list-group-item">나오는 코드를 복사</li>
-			<li class="list-group-item">github 사이트에서 SSH Keys를 붙여넣기해서 생성</li>
-		</ul>
-		<h3>commit : 추가와 확정</h3>
-		<p>변경된 파일 인덱스에 추가 : <code>git add filename</code> or <code>git add *</code></p>
-		<p>변경된 내용을 확정하려면 : <code>git commit -m "확정본에 대한 설명"</code> 그러면 HEAD에 반영됨.(원격저장소에는 반영안됨)</p>
-		<h3>발행 : push</h3>
-		<p>변경된 내용발행하기 : <code>git push origin master</code> 이 명령을 내리면 원격서버로 올라감.</p>
-		<p>원격저장소에서 복제한것이 아니라면 원격서버주소를 git에게 알려줘야함. <code>git remote add origin 원격서버주소</code></p>
-		<p>만약 로그인하지 않았다면 원격서버에 올리면 아이디와 비밀번호를 물어옴.</p>
-		<h3>branch : 가지치기</h3>
-		<p>새로운 저장소를 만들면 기본으로 master 가지가 만들어짐. 가지는 안전하게 격리된 상태에서 작업할때 사용, 차후 변합이 가능함</p>
-		<p>새로운 가지(branch_x)를 만들고 갈아탑니다. <code>git checkout -b branch_x</code></p>
-		<p>master 로 돌아가려면 <code>git checkout master</code></p>
-		<p>가지를 삭제하려면 : <code>git branch -d branch_x</code></p>
-		<h3>merge : 갱신과 병합</h3>
-		<p>로컬저장소를 원격저장소에 맞쳐 갱신하려면 : <code>git pull</code></p>
-		<p>다른가지에 있는 변경내용을 현재가지에 병합하려면 : <code>git merge 가지이름</code></p>
-		<p>첫번째든 두번째든 git 은 자동으로 병합(merge)을 시도함. 가끔 충돌(conflicts)이 일어남.직접 병합시도해야 됨. </p>
-		<p>충돌했다면 병합하라고 : <code>git add 파일이름</code></p>
-		<p>병합하기전 변경된 내용을 비교하려면 : <code>git diff 원래가지 비교대상가지</code></p>
-		<h3>tag : 꼬리표 달기</h3>
-		<p>태그뒤에 식별자(고유해야 됨)를 붙여야 함 식별자를 얻으려면 <code>git log</code> 를 통해 얻을수 있음</p>
-		<p>꼬리표를 달려면 <code>git tag 1.0.0 1b2e1d63ff</code> 뒤에 1b2e1d63ff 가 확정본 식별자 임</p>
-		<h3>되돌리기</h3>
-		<p>실수한경우 로컬의 내용을 되될릴수있다 : <code>git checkout --파일이름</code> 이것은 변경전상태(HEAD)로 되돌림. 인덱스에 추가된 내용과 새로 생성한 파일은 그대로 남음.</p>
-		<p>로컬의 있는 모든 변경 내용과 확정본을 포기하고, 원격저장소의 최신이력을 가지고 오고, 로컬 master가지가 저 이력을 가리키도록 할려면 : <code>git fetch origin</code> <br> <code>git reset --hard origin/master</code></p>
-		<h3>기타</h3>
-		<p>윈도우에서 git output 컬러로 출력하기 : <code>git config color.ui true</code></p>
-		<p>파일을 추가할때 대화식으로 추가하기 : <code>git add -i</code></p>
-		<br><br>
-		<p><a href="http://rogerdudler.github.io/git-guide/index.ko.html">git 한글안내서</a></p>
-	</div>
+<!--[if lt IE 7]>
+<p class="chromeframe">당신은 오래된 브라우져를 사용하고 있습니다. 사이트의 향상된 기능을 사용하기 위해 <a href="http://browsehappy.com/">브라우져를 업그레이드</a> 하시거나 <a href="http://www.google.com/chromeframe/?redirect=true">구글 크롬 프레임</a>를 업데이트 하세요.</p>
+<![endif]-->
+<div id="left">
+	<ul>
+		<li><a class="panel01" href="#panel01">git 사용법</a></li>
+		<li><a class="panel02" href="#panel02">panel02</a></li>
+		<li><a class="panel03" href="#panel03">panel03</a></li>
+		<li><a class="panel04" href="#">panel04</a></li>
+		<li><a class="panel05" href="#">panel05</a></li>
+		<li><a class="panel06" href="#">panel06</a></li>
+		<li><a class="panel07" href="#">panel07</a></li>
+		<li><a class="panel08" href="#">panel08</a></li>
+		<li><a class="panel09" href="#">panel09</a></li>
+		<li><a class="panel10" href="#">panel10</a></li>
+	</ul>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<div id="right">
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">demunCode</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#about">메뉴 2</a></li>
+					<li><a href="#contact">메뉴 3</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">list1</a></li>
+							<li><a href="#">list2</a></li>
+							<li><a href="#">link3</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Nav header</li>
+							<li><a href="#">list1</a></li>
+							<li><a href="#">list2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/">right-menu</a></li>
+					<li><a href="/">right-menu</a></li>
+					<li class="active"><a href="/">right-menu</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar -->
+	<div id="container" class="container">
+		<div class="row">
+			<div class="content">
+				<div class="open-panel panel panel-default" id="panel01">
+					<div class="panel-heading">git을 사용하는 기본적인 사용법</div>
+					<div class="panel-body">
+						<p>git 설치 : <a href="http://code.google.com/p/msysgit/downloads/list?can=3">windows 버젼설치</a></p>
+						<p>저장소 만들기 : 해당폴더안에서 <code>git init</code></p>
+						<p>저장소 복제 : <code>code clone /로컬/저장소/경로</code></p>
+						<h3>원격저장소 사용하는 순서.</h3>
+						<p>git 설치 -> 원격저장소에서 ssh 키 발행 -> 원격저장소 생성 -> 로컬에서 원격저장소 clone -> 파일및폴더생성, <code>git add 파일이름</code> , <code>git commit -m '커밋에대한내용'</code> , <code>git pull origin master</code> (원격저장소별명)(원격저장소 브렌치) 해서 원격저장소와 로컬저장소 병합 -> <code>git push origin master</code> 원격저장소 브렌치 전송</p>
+						<h3>ssh 키 생성하는 방법.</h3>
+						<ul class="list-group">
+							<li class="list-group-item">콘솔창에서 ssh-keygen 입력</li>
+							<li class="list-group-item">위에서 경로확인 예: cd /c/Users/컴퓨터이름/.ssh/ 하고 엔터</li>
+							<li class="list-group-item">cat id_rsa.pub 엔터</li>
+							<li class="list-group-item">나오는 코드를 복사</li>
+							<li class="list-group-item">github 사이트에서 SSH Keys를 붙여넣기해서 생성</li>
+						</ul>
+						<h3>commit : 추가와 확정</h3>
+						<p>변경된 파일 인덱스에 추가 : <code>git add filename</code> or <code>git add *</code></p>
+						<p>변경된 내용을 확정하려면 : <code>git commit -m "확정본에 대한 설명"</code> 그러면 HEAD에 반영됨.(원격저장소에는 반영안됨)</p>
+						<h3>발행 : push</h3>
+						<p>변경된 내용발행하기 : <code>git push origin master</code> 이 명령을 내리면 원격서버로 올라감.</p>
+						<p>원격저장소에서 복제한것이 아니라면 원격서버주소를 git에게 알려줘야함. <code>git remote add origin 원격서버주소</code></p>
+						<p>만약 로그인하지 않았다면 원격서버에 올리면 아이디와 비밀번호를 물어옴.</p>
+						<h3>branch : 가지치기</h3>
+						<p>새로운 저장소를 만들면 기본으로 master 가지가 만들어짐. 가지는 안전하게 격리된 상태에서 작업할때 사용, 차후 변합이 가능함</p>
+						<p>새로운 가지(branch_x)를 만들고 갈아탑니다. <code>git checkout -b branch_x</code></p>
+						<p>master 로 돌아가려면 <code>git checkout master</code></p>
+						<p>가지를 삭제하려면 : <code>git branch -d branch_x</code></p>
+						<h3>merge : 갱신과 병합</h3>
+						<p>로컬저장소를 원격저장소에 맞쳐 갱신하려면 : <code>git pull</code></p>
+						<p>다른가지에 있는 변경내용을 현재가지에 병합하려면 : <code>git merge 가지이름</code></p>
+						<p>첫번째든 두번째든 git 은 자동으로 병합(merge)을 시도함. 가끔 충돌(conflicts)이 일어남.직접 병합시도해야 됨. </p>
+						<p>충돌했다면 병합하라고 : <code>git add 파일이름</code></p>
+						<p>병합하기전 변경된 내용을 비교하려면 : <code>git diff 원래가지 비교대상가지</code></p>
+						<h3>tag : 꼬리표 달기</h3>
+						<p>태그뒤에 식별자(고유해야 됨)를 붙여야 함 식별자를 얻으려면 <code>git log</code> 를 통해 얻을수 있음</p>
+						<p>꼬리표를 달려면 <code>git tag 1.0.0 1b2e1d63ff</code> 뒤에 1b2e1d63ff 가 확정본 식별자 임</p>
+						<h3>되돌리기</h3>
+						<p>실수한경우 로컬의 내용을 되될릴수있다 : <code>git checkout --파일이름</code> 이것은 변경전상태(HEAD)로 되돌림. 인덱스에 추가된 내용과 새로 생성한 파일은 그대로 남음.</p>
+						<p>로컬의 있는 모든 변경 내용과 확정본을 포기하고, 원격저장소의 최신이력을 가지고 오고, 로컬 master가지가 저 이력을 가리키도록 할려면 : <code>git fetch origin</code> <br> <code>git reset --hard origin/master</code></p>
+						<h3>기타</h3>
+						<p>윈도우에서 git output 컬러로 출력하기 : <code>git config color.ui true</code></p>
+						<p>파일을 추가할때 대화식으로 추가하기 : <code>git add -i</code></p>
+						<br><br>
+						<p><a href="http://rogerdudler.github.io/git-guide/index.ko.html">git 한글안내서</a></p>
+					</div>
+				</div>
+				<div class="panel panel-default" id="panel02">
+					<div class="panel-heading">panel02</div>
+					<div class="panel-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, non, laboriosam, tenetur, ex ab harum voluptatem eaque minus optio vel voluptates corrupti recusandae. Aspernatur, aperiam ratione ipsa totam cumque aliquid.   
+					</div>
+				</div>
+				<div class="panel panel-default" id="panel03">
+					<div class="panel-heading">panel03</div>
+					<div class="panel-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, non, laboriosam, tenetur, ex ab harum voluptatem eaque minus optio vel voluptates corrupti recusandae. Aspernatur, aperiam ratione ipsa totam cumque aliquid.   
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr class="featurette-divider">
+	<!-- end footer 1 -->
+	<footer>
+		<div class="col-md-12">
+			<p class="pull-left copy">Copyright &copy; 2013 | <a href="#">Your Site</a></p>
+			<p class="pull-right"> &middot; <a href="#">link</a> &middot; <a href="#">link</a></p>
+		</div>
+	</footer> 	
+	<!-- end footer 1 -->
+</div>
+
+
+
+
+<!-- script -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jQuery -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script><!-- Bootstrap -->
+<script>
+	(function($){
+		$(document).ready(function() {
+			$('#left ul li a').on('click', function() {
+				var idx = $(this).attr('class').substring(5);
+				$(this).parent().siblings().find('a').removeClass('on');
+				$(this).addClass('on');
+				$('.panel').slideUp(0);
+				$('#panel' + idx).slideDown(200);
+			});
+		});
+
+	})(jQuery)
+</script>
 </body>
 </html>
