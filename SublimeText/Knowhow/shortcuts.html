@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html lang="ko" class="no-js old ie6"><![endif]-->
+<!--[if IE 7]><html lang="ko" class="no-js old ie7"><![endif]-->
+<!--[if IE 8]><html lang="ko" class="no-js old ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="no-js modern ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ko" class="no-js modern"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Fixed Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+
+    <style>
+      body {
+        min-height: 2000px;
+        padding-top: 70px;
+        font-family: 'Nanumgothic', '나눔고딕', 'Malgun Gothic', '맑은고딕', dotum, '돋음', sans-serif;
+      }
+    </style>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="https://raw.github.com/twbs/bootstrap/master/docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">서브라임텍스트 노하우</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="row">
+        
+        <div class="section" id="keyboard-shortcuts-windows-linux">
+        <h1>Keyboard Shortcuts - Windows/Linux<a class="headerlink" href="#keyboard-shortcuts-windows-linux" title="Permalink to this headline">¶</a></h1>
+        <div class="admonition warning">
+        <p class="first admonition-title">Warning</p>
+        <p class="last">This topic is a draft and may contain wrong information.</p>
+        </div>
+        <div class="section" id="editing">
+        <h2>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
+        <div class="section" id="windows">
+        <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="24%">
+        <col width="76%">
+        </colgroup>
+        <tbody valign="top">
+        <tr class="row-odd"><td>Ctrl + Alt + Up</td>
+        <td>Column selection up</td>
+        </tr>
+        <tr class="row-even"><td>Ctrl + Alt + Down</td>
+        <td>Column selection down</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        <div class="section" id="linux">
+        <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="22%">
+        <col width="78%">
+        </colgroup>
+        <tbody valign="top">
+        <tr class="row-odd"><td>Alt + ⇧ + Up</td>
+        <td>Column selection up</td>
+        </tr>
+        <tr class="row-even"><td>Alt + ⇧ + Down</td>
+        <td>Column selection up</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        </div>
+        <div class="section" id="navigation-goto-anywhere">
+        <h2>Navigation/Goto Anywhere<a class="headerlink" href="#navigation-goto-anywhere" title="Permalink to this headline">¶</a></h2>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="22%">
+        <col width="78%">
+        </colgroup>
+        <thead valign="bottom">
+        <tr class="row-odd"><th class="head">Keypress</th>
+        <th class="head">Command</th>
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr class="row-even"><td>Ctrl + P</td>
+        <td>Quick-open files by name</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + R</td>
+        <td>Goto symbol</td>
+        </tr>
+        <tr class="row-even"><td>Ctrl + ;</td>
+        <td>Goto word in current file</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + G</td>
+        <td>Goto line in current file</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        <div class="section" id="general">
+        <h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="30%">
+        <col width="70%">
+        </colgroup>
+        <thead valign="bottom">
+        <tr class="row-odd"><th class="head">Keypress</th>
+        <th class="head">Command</th>
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr class="row-even"><td>Ctrl + ⇧ + P</td>
+        <td>Command prompt</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + KB</td>
+        <td>Toggle side bar</td>
+        </tr>
+        <tr class="row-even"><td>Ctrl + ⇧ + Alt + P</td>
+        <td>Show scope in status bar</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        <div class="section" id="find-replace">
+        <h2>Find/Replace<a class="headerlink" href="#find-replace" title="Permalink to this headline">¶</a></h2>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="22%">
+        <col width="78%">
+        </colgroup>
+        <thead valign="bottom">
+        <tr class="row-odd"><th class="head">Keypress</th>
+        <th class="head">Command</th>
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr class="row-even"><td>Ctrl + F</td>
+        <td>Find</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + H</td>
+        <td>Replace</td>
+        </tr>
+        <tr class="row-even"><td>Ctrl + ⇧ + F</td>
+        <td>Find in files</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        <div class="section" id="tabs">
+        <h2>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h2>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="22%">
+        <col width="78%">
+        </colgroup>
+        <thead valign="bottom">
+        <tr class="row-odd"><th class="head">Keypress</th>
+        <th class="head">Command</th>
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr class="row-even"><td>Ctrl + ⇧ + t</td>
+        <td>Open last closed tab</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + PgUp</td>
+        <td>Cycle up through tabs</td>
+        </tr>
+        <tr class="row-even"><td>Ctrl + PgDn</td>
+        <td>Cycle down through tabs</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + ⇆</td>
+        <td>Find in files</td>
+        </tr>
+        <tr class="row-even"><td>Alt + [NUM]</td>
+        <td>Switch to tab number [NUM] where [NUM] &lt;= number of tabs</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        <div class="section" id="split-window">
+        <h2>Split window<a class="headerlink" href="#split-window" title="Permalink to this headline">¶</a></h2>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="22%">
+        <col width="78%">
+        </colgroup>
+        <thead valign="bottom">
+        <tr class="row-odd"><th class="head">Keypress</th>
+        <th class="head">Command</th>
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr class="row-even"><td>Alt + ⇧ + 2</td>
+        <td>Split view into two columns</td>
+        </tr>
+        <tr class="row-odd"><td>Alt + ⇧ + 1</td>
+        <td>Revert view to single column</td>
+        </tr>
+        <tr class="row-even"><td>Alt + ⇧ + 5</td>
+        <td>Set view to grid (4 groups)</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + [NUM]</td>
+        <td>Jump to group where num is 1-4</td>
+        </tr>
+        <tr class="row-even"><td>Ctrl + ⇧ + [NUM]</td>
+        <td>Move file to specified group where num is 1-4</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        <div class="section" id="bookmarks">
+        <h2>Bookmarks<a class="headerlink" href="#bookmarks" title="Permalink to this headline">¶</a></h2>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="22%">
+        <col width="78%">
+        </colgroup>
+        <thead valign="bottom">
+        <tr class="row-odd"><th class="head">Keypress</th>
+        <th class="head">Command</th>
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr class="row-even"><td>Ctrl + F2</td>
+        <td>Toggle bookmark</td>
+        </tr>
+        <tr class="row-odd"><td>F2</td>
+        <td>Next bookmark</td>
+        </tr>
+        <tr class="row-even"><td>⇧ + F2</td>
+        <td>Previous bookmark</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + ⇧ + F2</td>
+        <td>Clear bookmarks</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        <div class="section" id="text-manipulation">
+        <h2>Text manipulation<a class="headerlink" href="#text-manipulation" title="Permalink to this headline">¶</a></h2>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+        <colgroup>
+        <col width="22%">
+        <col width="78%">
+        </colgroup>
+        <thead valign="bottom">
+        <tr class="row-odd"><th class="head">Keypress</th>
+        <th class="head">Command</th>
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr class="row-even"><td>Ctrl + KU</td>
+        <td>Transform to Uppercase</td>
+        </tr>
+        <tr class="row-odd"><td>Ctrl + KL</td>
+        <td>Transform to Lowercase</td>
+        </tr>
+        </tbody>
+        </table></div>
+        </div>
+        </div>
+
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script><!-- jQuery -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script><!-- Bootstrap -->
+  </body>
+</html>
