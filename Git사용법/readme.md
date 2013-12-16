@@ -4,8 +4,17 @@ git을 윈도우에서 사용하기 위해서는 프로그램을 설치해야 �
 [git windows 버젼설치](http://code.google.com/p/msysgit/downloads/list?can=3)
 
 
-저장소 만들기 : 해당폴더안에서 `git init`
-저장소 복제 : `code clone /로컬/저장소/경로`
+저장소 만들기 : 해당폴더안에서 아래와 같은 명령어를 입력하면 된다.
+
+```git
+git init
+```
+
+저장소 복제
+
+```git
+code clone /로컬/저장소/경로
+```
 
 
 
@@ -34,16 +43,35 @@ git을 윈도우에서 사용하기 위해서는 프로그램을 설치해야 �
 
 
 ## pull
-발행하기전 먼저 원격저장소에 있는것과 로컬컴퓨터에 있는것과 차이점을 알아낸다.  		
-`git pull` or `git pull master` 하면 원격저장소와 로컬저장소와 병합 과정을 거친다. 			
+발행하기전 먼저 원격저장소에 있는것과 로컬컴퓨터에 있는것과 차이점을 알아낸다.  
+
+```git
+git pull
+```
+or 
+
+```git
+git pull master
+```
+
+하면 원격저장소와 로컬저장소와 병합 과정을 거친다. 			
 
 
 
 
 ## push : 발행하기
-변경된 내용발행하기 : `git push origin master` 이 명령을 내리면 원격서버로 올라감.
+변경된 내용발행하기 : 이 명령을 내리면 원격서버로 올라감. 
 
-원격저장소에서 복제한것이 아니라면 원격서버주소를 git에게 알려줘야함. `git remote add origin 원격서버주소`
+```git
+git push origin master
+```
+
+
+원격저장소에서 복제한것이 아니라면 원격서버주소를 git에게 알려줘야함. 
+
+```git
+git remote add origin 원격서버주소
+```
 
 만약 로그인하지 않았다면 원격서버에 올리면 아이디와 비밀번호를 물어옴.
 
@@ -52,18 +80,52 @@ git을 윈도우에서 사용하기 위해서는 프로그램을 설치해야 �
 
 ## branch : 가지치기
 새로운 저장소를 만들면 기본으로 master 가지가 만들어짐. 가지는 안전하게 격리된 상태에서 작업할때 사용, 차후 변합이 가능함
-새로운 가지(branch_x)를 만들고 갈아탑니다. `git checkout -b branch_x` 			
-master 로 돌아가려면 `git checkout master` 			
-가지를 삭제하려면 : `git branch -d branch_x`  			
+새로운 가지(branch_x)를 만들고 갈아탑니다. 
+
+```git
+git checkout -b branch_x
+```
+
+master 로 돌아가려면 
+
+```git
+git checkout master
+```
+
+가지를 삭제하려면 
+
+```git
+git branch -d branch_x
+```
 
 
 
 ## merge : 갱신과 병합
-로컬저장소를 원격저장소에 맞쳐 갱신하려면 : `git pull` 				
-다른가지에 있는 변경내용을 현재가지에 병합하려면 : `git merge 가지이름`  			
+로컬저장소를 원격저장소에 맞쳐 갱신하려면 : 
+
+```git
+git pull
+```
+
+다른가지에 있는 변경내용을 현재가지에 병합하려면 : 
+
+```git
+git merge 가지이름
+```
+
 첫번째든 두번째든 git 은 자동으로 병합(merge)을 시도함. 가끔 충돌(conflicts)이 일어남.직접 병합시도해야 됨.
-충돌했다면 병합하라고 : `git add 파일이름` 			
-병합하기전 변경된 내용을 비교하려면 : `git diff 원래가지 비교대상가지` 			
+충돌했다면 병합하라고 : 
+
+```git
+git add 파일이름
+```
+
+
+병합하기전 변경된 내용을 비교하려면 : 
+
+```git
+git diff 원래가지 비교대상가지
+```
 
 
 
@@ -75,17 +137,38 @@ master 로 돌아가려면 `git checkout master`
 
 ## 되돌리기
 실수한경우 로컬의 내용을 되될릴수있다
-`git checkout --파일이름`
+
+```git
+git checkout --파일이름
+```
 
 이것은 변경전상태(HEAD)로 되돌림. 
 인덱스에 추가된 내용과 새로 생성한 파일은 그대로 남음.
 
 로컬의 있는 모든 변경 내용과 확정본을 포기하고, 원격저장소의 최신이력을 가지고 오고, 
-로컬 master가지가 저 이력을 가리키도록 할려면 : `git fetch origin`  		
-`git reset --hard origin/master`				
+로컬 master가지가 저 이력을 가리키도록 할려면 : 
+
+```git
+git fetch origin
+```
+or 
+
+```git
+git reset --hard origin/master
+```
 
 
 
 ## 기타
-윈도우에서 git output 컬러로 출력하기 : `git config color.ui true` 		
-파일을 추가할때 대화식으로 추가하기 : `git add -i` 			
+윈도우에서 git output 컬러로 출력하기 : 
+
+```git
+git config color.ui true
+```
+
+파일을 추가할때 대화식으로 추가하기 : 
+
+```git
+git add -i
+```
+
