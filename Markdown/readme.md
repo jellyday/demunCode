@@ -151,20 +151,20 @@ Markdown(마크다운) 에 관련한 폴더입니다.
 이 글은 테스트 예제이며 [링크 문자열](http://example.com/ "Title") 인라인으로 표시되는 예제입니다.
 
 만약 같은 서버의 로컬 리소스를 참조하려면 상대 경로를 사용한다:
-````html
+```html
 See my [About](/about/) page for details.
-````
+```
 
 참조 형식의 링크는 두 번째에도 대괄호를 사용하며, 그 안에 링크와 대응하는 레이블을 넣는다.:
-````html
+```html
 This is [an example][id] reference-style link.
-````
+```
 
 옵션으로 대괄호를 공백으로 분리할 수도 있다:
 
-````html
+```html
 This is [an example] [id] reference-style link.
-````
+```
 
 그리고 문서 아무 곳에서나 다음과 같은 방법으로 링크를 참조할 수 있다:
 
@@ -186,11 +186,11 @@ This is [an example] [id] reference-style link.
 내부링크는 http:를 빼고 넣는다.                
 이미지링크는 맨 앞에 `!` 를 넣는다.                     
 
-````html
+```html
 [외부링크](http://naver.com)
 [내부링크](/naver.com)
 ![이미지링크](http://insanehong.kr/post/haroopress-mardown/@img/insanehong.jpeg)
-````
+```
 
 아래는 위코드의 예시.
 
@@ -202,13 +202,13 @@ This is [an example] [id] reference-style link.
 
 ```html
 <http://example.com/>
-````
+```
 
 마크다운은 이것을 다음처럼 바꾼다:
 
-````html
+```html
 <a href="http://example.com/">http://example.com/</a>
-````
+```
 
 
 
@@ -219,21 +219,21 @@ This is [an example] [id] reference-style link.
 두개의 `*`나 `_`로 감싸면 HTML `<strong>` 태그로 감싸게 된다. 		
 예로, 다음은:
 
-````html
+```html
 *single asterisks*
 _single underscores_
 **double asterisks**
 __double underscores__
-````
+```
 
 다음과 같이 출력된다.
 
-````html
+```html
 <em>single asterisks</em>
 <em>single underscores</em>
 <strong>double asterisks</strong>
 <strong>double underscores</strong>
-````
+```
 
 강조는 단어 중간에도 사용할 수 있다. 아래처럼 사용하면,
 <pre>이 글은 `*`강조`*`를 표현하기 위한 글입니다.</pre>
@@ -257,9 +257,9 @@ __double underscores__
 <pre>Use the `printf()` function.</pre>
 
 는 다음처럼 출력된다.
-````html
+```html
 <p>Use the <code>printf()</code> function.</p>
-````
+```
 
 문자 코드에 역따옴표를 포함하기 위해 여러 개의 역 따옴표를 사용할 수 있다:
 
@@ -267,18 +267,18 @@ __double underscores__
 
 그럼 아래처럼 출력된다.
 
-````html
+```html
 <p><code>There is a literal backtick (`) here.</code></p>
-````
+```
 
 코드블럭은 `<pre>` 나 `<code>` 로 감싸면 된다.
 또한 `<` 은 `&lt;` 와 같이 변환해서 넣어줘야 제대로 표시된다. 
 
 `<pre>`로 감싼 형태
 
-````html
+```html
 <pre><div class="test">test code</div></pre>
-````
+```
 
 
 <pre><div class="test">test code</div></pre>
@@ -286,9 +286,9 @@ __double underscores__
 
 `<code>`로 감싼 형태
 
-````html
+```html
 <code><div class="test">test code</div></code>
-````
+```
 
 <code><div class="test">test code</div></code>
 
@@ -325,13 +325,13 @@ __double underscores__
 마크다운 문법에서 특별한 의미를 갖는 문자를 글자 그대로 사용하려면, 역 슬래시(`\`) 예외처리(escape)를 사용할 수 있다.
 예를들어 HTML의 `<em>` 태그 대신에 별표 문자로 하나의 단어를 감싸려면 별표 앞에 역슬래시를 두면 된다.
 
-````html
+```html
 \*별표 문자\*
-````
+```
 
 마크다운은 다음과 같은 문자에 대해 이스케이프를 지원한다:
 
-````html
+```html
 \   backslash
 `   backtick
 *   asterisk
@@ -344,7 +344,7 @@ _   underscore
 -   minus sign (hyphen)
 .   dot
 !   exclamation mark
-````
+```
 
 
 
