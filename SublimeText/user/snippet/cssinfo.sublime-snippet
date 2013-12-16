@@ -1,10 +1,10 @@
 <snippet>
-	<content><![CDATA[(function(\$){
-	${1}
-})(jQuery);
+	<content><![CDATA[
+/* ${1} */
+${2}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>function-Snippet</tabTrigger>
+	<tabTrigger>css-03</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.js</scope>
+	<scope>source.css,source.less</scope>
 </snippet>

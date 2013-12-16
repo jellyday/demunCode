@@ -1,10 +1,10 @@
 <snippet>
-	<content><![CDATA[(function(\$){
-	${1}
-})(jQuery);
+	<content><![CDATA[// ${1:제목을 입력하고 탭}
+// --------------------------------------------------
+${2}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>function-Snippet</tabTrigger>
+	<tabTrigger>less-comment</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.js</scope>
+	<scope>source.less</scope>
 </snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <!-- Example: Hello, ${1:this} is a ${2:snippet}. -->
+  <content><![CDATA[<table summary="${1:테이블요약설명}" class="tb-${2:01}">
+	<caption>${3:테이블제목}</caption>
+	<colgroup>
+		<col style="width:${4:100px"}>
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="${5:col}"${6: class="th-left"}>${7}</th>
+			<th scope="${8:col}">${9}</th>
+			<th scope="${10:col}"${11: class="th-right"}>${12}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="${13:row}">${14}</th>
+			<td>${15}</td>
+		</tr>
+	</tbody>
+</table>]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>tb1</tabTrigger>
+  <description>table</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.html,text.html</scope>
+</snippet>
