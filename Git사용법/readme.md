@@ -1,21 +1,26 @@
 # git을 사용하는 방법
 
-git을 윈도우에서 사용하기 위해서는 프로그램을 설치해야 한다.
-[git windows 버젼설치](http://code.google.com/p/msysgit/downloads/list?can=3)
+윈도우에서 콘솔창을 사용하여 git을 사용하는 방법을 알아본다.
+먼저 순서를 알고 그에 맟쳐 진행한다.
 
 
-저장소 만들기 : 해당폴더안에서 아래와 같은 명령어를 입력하면 된다.
+목차
+- 원격저장소 사용하는 순서.
+- git 설치.
+- ssh 키 생성하는 방법.
+- 저장소 복제
+- git add
+- commit
+- pull
+- push : 발행하기
+- branch : 가지치기
+- merge : 갱신과 병함
+- tag : 꼬리표달기
+- 되돌리기
+- 기타
 
-```git
-git init
-```
 
-저장소 복제
-
-```git
-code clone /로컬/저장소/경로
-```
-
+------------------------------------------
 
 
 ## 원격저장소 사용하는 순서.
@@ -23,27 +28,94 @@ code clone /로컬/저장소/경로
 - 원격저장소에서 ssh 키 발행
 - 원격저장소 생성
 - 로컬에서 원격저장소 clone
-- 파일및폴더생성, git add 파일이름 , git commit -m '커밋에대한내용' , git pull origin master (원격저장소별명)(원격저장소 브렌치) 해서 원격저장소와 로컬저장소 병합 
-- git push origin master 원격저장소 브렌치 전송
+- 파일 및 폴더생성 및 작업
+- `git add 파일이름`
+- `git commit -m '커밋에대한내용'`
+- `git pull origin master (원격저장소별명)(원격저장소 브렌치)` 해서 원격저장소와 로컬저장소 병합 
+- `git push origin master` 원격저장소 브렌치 전송
+
+
+
+
+## git 설치
+git을 윈도우에서 사용하기 위해서는 프로그램을 설치해야 한다.
+[git windows 버젼설치하러 가기](http://code.google.com/p/msysgit/downloads/list?can=3)
+
+
 
 
 
 ## ssh 키 생성하는 방법.
 
 - 콘솔창에서 ssh-keygen 입력
-- 위에서 경로확인 예: cd /c/Users/컴퓨터이름/.ssh/ 하고 엔터
-- cat id_rsa.pub 엔터
-- 나오는 코드를 복사
+- 위에서 경로확인 예: /c/Users/컴퓨터이름/.ssh/id_rsa
+- `cd /c/Users/컴퓨터이름/.ssh/` 를 입력해서 해당 폴더로 간다.
+- `ls -al` 를 입력하면 해당 폴더를 볼 수 있다. 해당폴더에서 id_rsa.pub 를 확인한다
+- 콘솔창에서 `cat id_rsa.pub` 엔터
+- 긴 코드가 나오는데 그것이 key 다. 나온 key 코드를 복사
 - github 사이트에서 SSH Keys를 붙여넣기해서 생성
-- commit : 추가와 확정
-- 변경된 파일 인덱스에 추가 : git add filename or git add *
 
 
+
+
+
+## 원격저장소 생성
+원격저장소는 github.comd 에서 생성하면 된다.
+- Repositories 를 클릭
+- New를 클릭해서 생성한다.
+- Repository name 을 입력.
+- Description 설명입력
+- Public 공개을 선택하고 입력
+- Initialize this repository with a README 체크하고 생성 Create repository 클릭하면 생성.
+
+
+
+
+
+
+## 저장소 복제
+로컬 컬퓨터에서 해당 저장소를 복제한다.
+
+```git
+code clone /로컬/저장소/경로
+```
+
+복제하지 않고 그냥 로컬에서 작업을 하려면 git 버젼관리를 시작하기 위해 해당폴더안에서 아래와 같은 명령어를 입력하면 된다.
+
+```git
+git init
+```
+
+그러면 git 버젼관리가 시작된다.
+
+
+
+
+
+## git add
+파일을 수정하거나 또는 생성하면 git 에게 파일이 수정됐다는 것을 알린다. 그것이 add
+
+```git
+git add filename
+```
+
+
+
+
+
+## commit
+add 를 해서 git에게 수정하거나 생성한 파일을 알리면 그 다음 커밋을 한다.
 변경된 내용을 확정하려면 : git commit -m "확정본에 대한 설명" 그러면 HEAD에 반영됨.(원격저장소에는 반영안됨)
+
+```git
+git commit -m "설명"
+```
+
+
 
 
 ## pull
-발행하기전 먼저 원격저장소에 있는것과 로컬컴퓨터에 있는것과 차이점을 알아낸다.  
+발행하기전 먼저 원격저장소에 있는것과 로컬컴퓨터에 병합 과정을 거친다.
 
 ```git
 git pull
@@ -54,7 +126,7 @@ or
 git pull master
 ```
 
-하면 원격저장소와 로컬저장소와 병합 과정을 거친다. 			
+
 
 
 
@@ -78,8 +150,20 @@ git remote add origin 원격서버주소
 
 
 
+
+------------------------------------------------------
+
+일반적으로 작업은 여기까지 아래는 기타 사항
+
+-------------------------------------------------------
+
+
+
+
+
 ## branch : 가지치기
-새로운 저장소를 만들면 기본으로 master 가지가 만들어짐. 가지는 안전하게 격리된 상태에서 작업할때 사용, 차후 변합이 가능함
+새로운 저장소를 만들면 기본으로 master 가지가 만들어짐. 
+가지는 안전하게 격리된 상태에서 작업할때 사용, 차후 변합이 가능함
 새로운 가지(branch_x)를 만들고 갈아탑니다. 
 
 ```git
@@ -97,6 +181,8 @@ git checkout master
 ```git
 git branch -d branch_x
 ```
+
+
 
 
 
@@ -132,6 +218,9 @@ git diff 원래가지 비교대상가지
 ## tag : 꼬리표 달기
 태그뒤에 식별자(고유해야 됨)를 붙여야 함 식별자를 얻으려면 `git log` 를 통해 얻을수 있음
 꼬리표를 달려면 `git tag 1.0.0 1b2e1d63ff` 뒤에 `1b2e1d63ff` 가 확정본 식별자 임
+
+
+
 
 
 
