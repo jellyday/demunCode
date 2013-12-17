@@ -5,19 +5,20 @@
 
 
 목차
-- 원격저장소 사용하는 순서.
-- git 설치.
-- ssh 키 생성하는 방법.
-- 저장소 복제
-- git add
-- commit
-- pull
-- push : 발행하기
-- branch : 가지치기
-- merge : 갱신과 병함
-- tag : 꼬리표달기
-- 되돌리기
-- 기타
+- [원격저장소 사용하는 순서](%EC%9B%90%EA%B2%A9%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%88%9C%EC%84%9C)
+- [git 설치](git-%EC%84%A4%EC%B9%98)
+- [ssh 키 생성하는 방법](ssh-%ED%82%A4-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+- [원격저장소 생성](%EC%9B%90%EA%B2%A9%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%83%9D%EC%84%B1)
+- [저장소 복제](%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%B3%B5%EC%A0%9C)
+- [git add](git-add)
+- [commit](commit)
+- [pull](pull)
+- [push : 발행하기](push--%EB%B0%9C%ED%96%89%ED%95%98%EA%B8%B0)
+- [branch : 가지치기](branch--%EA%B0%80%EC%A7%80%EC%B9%98%EA%B8%B0)
+- [merge : 갱신과 병함](merge--%EA%B0%B1%EC%8B%A0%EA%B3%BC-%EB%B3%91%ED%95%A9)
+- [tag : 꼬리표달기](tag--%EA%BC%AC%EB%A6%AC%ED%91%9C-%EB%8B%AC%EA%B8%B0)
+- [되돌리기](%EB%90%98%EB%8F%8C%EB%A6%AC%EA%B8%B0)
+- [기타](%EA%B8%B0%ED%83%80)
 
 
 ------------------------------------------
