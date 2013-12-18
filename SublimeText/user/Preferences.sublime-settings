@@ -6,7 +6,7 @@
 	"bold_folder_labels"     : true,                // 폴더 굵게 표시하기
 	"fade_fold_buttons"      : false,               // 코드 '접기' 화살표 보이기
 	"highlight_line"         : true,                // 현재 라인 강조
-	"highlight_modified_tabs": true,                //포커스 이동시 저장
-	"save_on_focus_lost"     : true,                // 폴더 굵게 표시하기
+	"highlight_modified_tabs": true,                // 수정된 탭 강조
+	"save_on_focus_lost"     : true,                // 포커스 이동시 저장
 	"alignment_chars": ["=",":"] // Alignment 플러그인 설치후 
 }
