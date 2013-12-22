@@ -1,2 +1,2 @@
 document.getElementById('theButton').onclick = ->
-	alert('clicked')
+	alert('수정해봄. 다시 수정')

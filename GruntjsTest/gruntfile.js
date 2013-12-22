@@ -14,10 +14,35 @@ module.exports = function(grunt){
 					'site.css' : 'less/site.less'
 				}
 			}
+		},
+		watch:{
+			options:{livereload:true},
+			coffee:{
+				files:'coffee/*.coffee',
+				tasks:'coffee'
+			},
+			less: {
+				files:'less/*.less',
+				tasks:'less'
+			}
+		},
+		express:{
+			all:{
+				options:{
+					port:9000,
+					hostname:'localhost',
+					bases:['.'],
+					livereload:true
+				}
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-coffee');
-	grunt.loadNpmTasks('default',['coffee','less']);
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-express');
+
+	grunt.registerTask('default',['coffee','less']);
+	grunt.registerTask('server',['express','watch']);
 }
