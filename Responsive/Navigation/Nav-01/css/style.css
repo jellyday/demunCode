@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* IE10 viewport fix */
+@-ms-viewport { width:device-width; }
+@viewport { width:device-width; }
+
+/* 기본설정 */
+body {
+	font-family: '나눔고딕','맑은고딕','돋음', Verdana, Geneva, sans-serif;
+}
+a {
+	text-decoration:none;
+}
+
+.container {
+	padding: 2em 1em;
+}
+.container h1 {
+	font-size:2em;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+
+
+
+
+/* 너비설정 */
+
+.nav-hold,
+.image-grid,
+.container {
+	width:95%;
+	max-width:1000px;
+	margin:0 auto;
+}
+
+
+
+/* 네비게이션 */
+
+.nav-bar {
+	width:100%;
+	background:#222;
+}
+.nav-hold {
+	overflow:hidden;
+}
+.nav-logo {
+	float:left;
+	display:block;
+	padding:20px 10px;
+	color:#f9f9f9;
+	font-weight:600;
+}
+.nav-list {
+	float:right;
+}
+.nav-list li {
+	float:left;
+}
+.nav-list li a {
+	display:block;
+	padding:20px 10px;
+	color:#f9f9f9;
+}
+.nav-menu {
+	display:none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:767px) {
+	.nav-menu {
+		float:right;
+		color:#f9f9f9;
+		display:block;
+		padding:20px 10px;
+		cursor: pointer;
+	}
+	.nav-list {
+		display:none;
+	}
+	.nav-open {
+		float:left;
+		width:100%;
+		display:block;
+	}
+	.nav-list li {
+		width:100%;
+	}
+	.nav-list li a {
+		display:block;
+		padding:20px 10px;
+		color:#f9f9f9;
+		width:100%;
+	}
+}
+
+
