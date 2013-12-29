@@ -1,3 +1,10 @@
+// 'use strict';
+// var LIVERELOAD_PORT = 35730;
+// var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
+// var mountFolder = function(connect, dir) {
+// 	return connect.static(require('path').resolve(dir));
+// };
+
 module.exports = function(grunt){
 	grunt.initConfig({
 		pkg:grunt.file.readJSON('package.json'),
@@ -32,7 +39,8 @@ module.exports = function(grunt){
 					port:9000,
 					hostname:'localhost',
 					bases:['.'],
-					livereload:true
+					livereload: true
+					// livereload: 35729
 				}
 			}
 		}
