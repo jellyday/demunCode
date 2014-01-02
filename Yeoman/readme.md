@@ -9,6 +9,29 @@ yeoman 을 사용하기 위해서는 [node.js](http://nodejs.org/) , [git](http:
 > 또한 옵션까지 수정하고 수정된 옵션을 적용하는 방법까지 적혀있다.  
 
 
+
+```
+npm install -g yo
+npm install -g generator-webapp
+yo webapp
+// bootstrap
+// Mordernizr 등 선택하는 화면 나오고 화살표로 원하는 모듈 선택
+
+// grunt server 를 하기전 루비 및 compass가 설치되어있는지 확인
+// 없다면 설치, compass 설치는
+gem update --system
+gem install compass
+
+
+grunt server
+// index 파일열림.
+// 파일 수정 등 작업
+
+grunt
+```
+
+
+
 ## yeoman 설치 및 사용순서
 
 아래의 순서대로 설치하거나 진행해야 된다.
