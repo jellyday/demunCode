@@ -1,0 +1,24 @@
+$red: red;
+
+.container {
+  background-color: $red;
+  color: gray;
+}
+
+h1 {
+  line-height: 1.5em;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: $red;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// comment
+
+/* comment 2 */
+

@@ -1,0 +1,7 @@
+.box {
+  -webkit-border-radius: red 2px 2px 10px;
+  -moz-border-radius: red 2px 2px 10px;
+  -ms-border-radius: red 2px 2px 10px;
+  -o-border-radius: red 2px 2px 10px;
+  border-radius: red 2px 2px 10px;
+}
