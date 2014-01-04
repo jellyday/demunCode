@@ -10,7 +10,8 @@
 
     "windows":
     {
-        "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "$file", "${file_base_name}.css"] //To just store the css in the same folder as the less
+        // "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "$file", "${file_base_name}.css"] //To just store the css in the same folder as the less
+        "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "$file", "${file_path}/../css/${file_base_name}.css"] //상위 css 폴더에 빌드시킴
     },
 
     "variants": [
@@ -24,8 +25,8 @@
             },
             "windows":
             {
-                "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "-m", "${file}", "${file_base_name}.min.css"] // 기본설정
-                // "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "$file", "..\\css/${file_base_name}.css"] // 상위 css 폴더에 저장하는 설정
+                "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "-m", "${file}", "${file_base_name}.min.css"]
+
             }
         }
     ]
