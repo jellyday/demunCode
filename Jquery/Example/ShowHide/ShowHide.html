@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="ko" xml:lang="ko" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!--[if lte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+    <title></title>
+    <meta name="description" content="demun">
+    <meta name="author" content="demun">
+    <style>
+a.on { font-size: 3em; }
+div { padding: 1em; border: 1px solid #06f; }
+    </style>
+<body>
+
+	<ul class="tab">
+		<li><a href="javascript:;">01</a></li>
+		<li><a href="javascript:;">02</a></li>
+		<li><a href="javascript:;">03</a></li>
+		<li><a href="javascript:;">04</a></li>
+		<li><a href="javascript:;">05</a></li>
+	</ul>
+
+	<div class="tabDiv">
+		<h1>Div 01</h1>
+	</div>
+	<div class="tabDiv">
+		<h1>Div 02</h1>
+	</div>
+	<div class="tabDiv">
+		<h1>Div 03</h1>
+	</div>
+	<div class="tabDiv">
+		<h1>Div 04</h1>
+	</div>
+	<div class="tabDiv">
+		<h1>Div 05</h1>
+	</div>
+
+</body>
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		var tab = $('.tab').find('a');
+		$('.tabDiv').eq(0).siblings('div').hide();
+		tab.on('click', function() {
+			var idx = tab.index(this);
+			tab.removeClass('on');
+			$(this).addClass('on');
+			$('.tabDiv').hide();
+			$('.tabDiv').eq(idx).show();
+		});
+	});
+</script>
+
+</html>
