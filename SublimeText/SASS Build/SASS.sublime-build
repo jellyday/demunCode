@@ -1,0 +1,18 @@
+{
+
+	// "cmd": ["sass", "--update", "$file:${file_path}/${file_base_name}.css", "--stop-on-error", "--no-cache"],
+	"cmd": ["sass", "--update", "$file:${file_path}/../css/${file_base_name}.css", "--stop-on-error", "--no-cache"],//상위 css 폴더에 빌드시킴
+	"selector": "source.sass, source.scss",
+	"line_regex": "Line ([0-9]+):",
+
+	"osx":
+	{
+		"path": "/usr/local/bin:$PATH"
+	},
+
+	"windows":
+	{
+		"shell": "true"
+	}
+
+}
