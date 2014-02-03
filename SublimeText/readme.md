@@ -79,7 +79,7 @@ demun.sublime-project 파일은 프로젝트 설정파일입니다.
 
 # sftp
 셋팅에 필요한 파일
-![/images/0010.jpg](셋팅에 필요한 파일)
+![셋팅에 필요한 파일](images/0010.jpg)
 
 
 
