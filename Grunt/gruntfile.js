@@ -43,8 +43,11 @@ module.exports = function(grunt) {
         }
       }
     },
-    watch: { // 설정한 파일에 어떤 변화가 감지될 때, 지정한 task들을 순서대로 실행한다
-      // grung watch 를 실행하면 감지한다.
+
+    // 설정한 파일에 어떤 변화가 감지될 때, 지정한 task들을 순서대로 실행한다
+    // grung watch 를 실행하면 감지한다.
+    // watch 모듈안에는 각 모듈에 대한 설정을 할 수 있다.
+    watch: { 
       // files: ['<%= jshint.files %>'],
       // tasks: ['jshint', 'qunit'] 
       js:{
@@ -112,6 +115,44 @@ module.exports = function(grunt) {
       }
     },
 
+    jade: {
+      compile: {
+        options: {
+          pretty: true
+        },
+        files: {
+          'dist/html/test.html': 'src/jade/test.jade'
+        }
+      }
+    },
+
+    modernizr: {
+      devFile: 'src/js/lib/modernizr.js', //개발에 사용하고있는 로컬 빌드 파일에 대한 경로
+      outputFile: 'dist/js/lib/modernizr.js', //사용자 정의 Modernizr 빌드를 저장하는 경로
+      files: [
+        'dist/js/{,*/}*.js',
+        '!dist/js/lib/*',
+        'dist/css/{,*/}*.css'
+      ],
+      uglify: true
+    },
+
+    validation: {
+      options: {
+        charset: 'utf-8',
+        doctype: 'HTML5',
+        failHard: true,
+        reset: true,
+        relaxerror: [
+          'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
+          'Element img is missing required attribute src.'
+        ]
+      },
+      files: {
+        src: 'dist/**/*.html'
+      }
+    },
+
     copy:{ // 파일및 폴더 복사
       dist: {
         files: [{
@@ -165,14 +206,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-csscomb');
+  grunt.loadNpmTasks('grunt-modernizr');
+  grunt.loadNpmTasks('grunt-html-validation');
 
   // 커멘드 라인에 "grunt test"를 입력하면 실행된다.
-  grunt.registerTask('test', ['jshint', 'qunit']);
+  grunt.registerTask('test', ['jshint', 'qunit', 'modernizr', 'validation']);
 
   grunt.registerTask('server', ['connect:livereload', 'watch']);
 
   // default task는 커멘드 라인에 "grunt"만 입력했을 때 실행할 task들이다.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'less', 'copy', 'csscomb']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'less', 'copy', 'csscomb', 'jade']);
 
 };
