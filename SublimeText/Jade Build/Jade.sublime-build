@@ -1,0 +1,6 @@
+{
+	"cmd": ["jade", "$file", "--out", "../html", "--pretty"], // 부모폴더 html 폴더에 생성.
+	"selector": "source.jade",
+	"osx": {"path": "/usr/local/bin:$PATH"},
+	"windows": {"shell": "true"}
+}
