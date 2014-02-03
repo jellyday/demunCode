@@ -58,7 +58,7 @@ shortcuts.html 은 현재 작성하기 위해 업로드 해놓은 파일-참고�
 
 
 ## 기타
-demun.sublime-project 파일은 프로젝트 설정파일입니다.
+demun.sublime-project 파일은 프로젝트 설정파일입니다.  			
 자주 사용하는 구문이여서 추가해서 사용하고 있습니다.
 
 
@@ -79,7 +79,7 @@ demun.sublime-project 파일은 프로젝트 설정파일입니다.
 
 # sftp
 셋팅에 필요한 파일
-![images/0010.jpg](셋팅에 필요한 파일)
+![/images/0010.jpg](셋팅에 필요한 파일)
 
 
 
