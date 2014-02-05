@@ -1,47 +1,59 @@
-[
-	{"id": "side-bar-files-open-with",
-		"children":
-		[
+[{
+    "id": "side-bar-files-open-with",
+    "children": [
 
-			//application 1
-			{
-				"caption": "Photoshop",
-				"id": "side-bar-files-open-with-photoshop",
+        // Chrome
+        {
+            "caption": "Chrome",
+            "id": "side-bar-files-open-with-chrome",
 
-				"command": "side_bar_files_open_with",
-				"args": {
-									"paths": [],
-									"application": "Adobe Photoshop CS5.app", // OSX
-									"extensions":"psd|png|jpg|jpeg"  //any file with these extensions
-								}
-			},
-			// Chrome
-			{
-				"caption": "Chrome",
-				"id": "side-bar-files-open-with-chrome",
+            "command": "side_bar_files_open_with",
+            "args": {
+                "paths": [],
+                "application": "C:\\Program Files\\Google\\Chrome\\Application/chrome.exe", // Chrome
+                "extensions": "html|.*" //any file with these extensions
+            }
+        },
+        // Internet Explorer
+        {
+            "caption": "Internet Explorer",
+            "id": "side-bar-files-open-with-iexplore",
 
-				"command": "side_bar_files_open_with",
-				"args": {
-									"paths": [],
-									"application": "C:\\Program Files\\Google\\Chrome\\Application/chrome.exe", // Chrome
-									"extensions":"html|.*"  //any file with these extensions
-								}
-			},
-			// Internet Explorer
-			{
-				"caption": "Internet Explorer",
-				"id": "side-bar-files-open-with-iexplore",
+            "command": "side_bar_files_open_with",
+            "args": {
+                "paths": [],
+                "application": "C:\\Program Files\\Internet Explorer\\iexplore.exe", // Internet Explorer
+                "extensions": "html|.*" //any file with these extensions
+            }
+        },
 
-				"command": "side_bar_files_open_with",
-				"args": {
-									"paths": [],
-									"application": "C:\\Program Files\\Internet Explorer\\iexplore.exe", // Internet Explorer
-									"extensions":"html|.*"  //any file with these extensions
-								}
-			},
+        {
+            "caption": "-"
+        }
 
+        // Photoshop
+        {
+            "caption": "Photoshop",
+            "id": "side-bar-files-open-with-photoshop",
 
-			{"caption":"-"}
-		]
-	}
-]
+            "command": "side_bar_files_open_with",
+            "args": {
+                "paths": [],
+                "application": "C:\\Program Files\\Adobe\\Adobe Photoshop CC (64 Bit)\\Photoshop.exe", // install path
+                "extensions": "psd|png|jpg|jpeg" //any file with these extensions
+            }
+        },
+        // Honeyview
+        {
+            "caption": "Honeyview",
+            "id": "side-bar-files-open-with-Honeyview",
+
+            "command": "side_bar_files_open_with",
+            "args": {
+                "paths": [],
+                "application": "C:\\Program Files\\Honeyview\\Honeyview.exe", // install path
+                "extensions": "psd|png|jpg|jpeg" //any file with these extensions
+            }
+        }
+    ]
+}]
