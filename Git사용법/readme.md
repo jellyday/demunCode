@@ -56,7 +56,10 @@ git을 윈도우에서 사용하기 위해서는 프로그램을 설치해야 �
 - 긴 코드가 나오는데 그것이 key 다. 나온 key 코드를 복사
 - github 사이트에서 SSH Keys를 붙여넣기해서 생성
 
-
+> pub key 를 생성해도 이메일과 이름을 물어올때가 있다. 		
+> git config --global user.email "본인이메일" 		
+> git config --global user.name "본인이름" 		
+> 을 입력한다.
 
 
 
