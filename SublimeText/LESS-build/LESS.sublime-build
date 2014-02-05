@@ -25,8 +25,8 @@
             },
             "windows":
             {
-                "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "-m", "${file}", "${file_base_name}.min.css"]
-
+                // "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "-m", "${file}", "${file_base_name}.min.css"]
+                "cmd": ["$packages\\LESS-build\\dotless.Compiler.exe", "$file", "${file_path}/../css/${file_base_name}.css"] //상위 css 폴더에 빌드시킴
             }
         }
     ]
