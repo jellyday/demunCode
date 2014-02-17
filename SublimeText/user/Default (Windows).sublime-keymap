@@ -5,3 +5,23 @@
 	{ "keys": ["super+shift+v"], "command": "paste" },                                         // 붙여넣기 후 바로 재정렬
 	{ "keys": ["super+shift+r"],  "command": "reindent" }                                      // 재정렬 단축키
 ]
+// st3
+// [{ // 현재파일을 새창으로 여는 단축키
+//     "keys": ["ctrl+shift+c"],
+//     "command": "open_in_browser"
+// }, { // 코드를 한줄로 배열하는 토글 단축키
+//     "keys": ["ctrl+shift+w"],
+//     "command": "toggle_setting",
+//     "args": {
+//         "setting": "word_wrap"
+//     }
+// }, { // 붙여넣기 후 바로 재정렬
+//     "keys": ["super+v"],
+//     "command": "paste_and_indent"
+// }, { // 붙여넣기 후 바로 재정렬
+//     "keys": ["super+shift+v"],
+//     "command": "paste"
+// },{ // 재정렬 단축키
+//     "keys": ["super+shift+r"],
+//     "command": "reindent"
+// }]
