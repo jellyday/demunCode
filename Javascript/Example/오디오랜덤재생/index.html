@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>오디오 재생</title>
+
+<script>
+
+var bgm = new Audio('');
+if(!bgm.canPlayType('audio/mp3')) alert('브라우저가 2014-02-17 mp3 재생을 지원하지 않습니다.');
+else {
+    var myTest = new Array('./audio/su_o1.mp3', './audio/su_o2.mp3', './audio/su_o3.mp3','./audio/su_x1.mp3', './audio/su_x2.mp3', './audio/su_x3.mp3');
+    function randomItem(myTest) {
+      return myTest[Math.floor(Math.random() * myTest.length)];
+    }
+
+    var bgm_url = randomItem(myTest);
+    bgm = new Audio(bgm_url);
+    bgm.play();
+}
+
+</script>
+</head>
+<body>
+
+<h1>오디오 랜덤 재생 : 새로고침</h1>
+
+<pre>
+    var bgm = new Audio('');
+    if(!bgm.canPlayType('audio/mp3')) alert('브라우저가 2014-02-17 mp3 재생을 지원하지 않습니다.');
+    else {
+        var myTest = new Array('./audio/su_o1.mp3', './audio/su_o2.mp3', './audio/su_o3.mp3','./audio/su_x1.mp3', './audio/su_x2.mp3', './audio/su_x3.mp3');
+        function randomItem(myTest) {
+          return myTest[Math.floor(Math.random() * myTest.length)];
+        }
+
+        var bgm_url = randomItem(myTest);
+        bgm = new Audio(bgm_url);
+        bgm.play();
+    }
+</pre>
+
+</body>
+</html>
