@@ -1,0 +1,85 @@
+/* 
+========================================================================================
+	tutsplus.com : Jeffrey Way
+	Heo, Jong-Mun
+	hjm01@naver.com
+	2014.02.27
+========================================================================================
+*/
+ul {
+	-webkit-perspective: 600;
+}
+
+li {
+	width: 200px;
+	height: 200px; 
+	/*background:  red; */
+	float: left;
+	list-style: none;
+
+	margin-bottom: 20px;
+	margin-right: 20px;
+
+	position: relative;
+	cursor: pointer;
+	counter-increment: item;
+}
+
+
+
+li div {
+	/*color:  yellow; */
+	height: 100%;
+	width: 100%;
+	position: absolute;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	-ms-transition: all .5s;
+	transition: all .5s;
+	-webkit-backface-visibility: hidden;
+
+	-webkit-box-shadow: 0 6px 10px -8px rgba(0,0,0,.8);
+	box-shadow: 0 6px 10px -8px rgba(0,0,0,.8);
+}
+
+li:hover .front {
+	z-index: 0;
+
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+li:hover .back {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+
+.front {
+	z-index: 3;
+	color: #c5c5c5;
+	text-align: center;
+	line-height: 200px;
+	font-size: 80px; 
+	background:  #e3e3e3; 
+}
+
+.front:after {
+	content: counter(item);
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
