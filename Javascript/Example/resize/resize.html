@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>브라우져 너비 알아보기</title>
+<head>
+<style>
+    html,body { margin: 0; padding: 0; }
+    #test { background: blue; color: #fff; border: 1px solid #ccc; padding: 1em; width: 200px; margin: 0; position: relative; }
+    #test:hover { background: red;}
+</style>
+</head>
+<body>
+
+    <div id='test'></div>
+
+</body>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function(){
+
+    // 리사이징 될때 함수를 넣는다.
+    $(window).resize(function(e) {
+       showViewportSize();
+    });
+
+    // 브라우져의 너비,높이
+    function showViewportSize() {
+        var the_width = $(window).width() / 2 - '50',
+            the_height = $(window).height() /2 - '50',
+            test = $('#test');
+
+            test.animate({ 'margin-left': the_width, 'margin-top': the_height}, 200, 'swing', function(){
+                $(this).html('현재 브라우저의 너비: ' + the_width + 'px' + ' 높이: ' + the_height + 'px');
+            });
+    };
+    showViewportSize();
+
+});
+</script>
+
+
+<!--sublimetext livereload -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+
+</html>
