@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<!-- http://webdesignerwall.com/tutorials/css-elastic-videos -->
+<meta charset="utf-8">
+
+<!-- disable iPhone inital scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<title>Flexible Embedded Videos</title>
+
+<style>
+
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+body {
+	margin: 30px auto;
+}
+
+
+/* 고정폭을 사용할 경우 - video-wrapper 로 설정할 수 있음
+------------------------------------------------------------------------------------- */
+/*
+.video-wrapper {
+	width: 600px;
+	max-width: 100%;
+}
+*/
+
+
+/************************************************************************************
+video-container
+*************************************************************************************/
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<h1>CSS만으로 유동폭, 고정폭을 사용할 수 있음</h1>
+
+<div class="video-wrapper">
+	<div class="video-container">
+		<iframe src="http://www.youtube.com/embed/Uz6DZ4Pe1ms?list=UUX3oVHgwG_5nWLe4_k740Dw" width="800" height="450" frameborder="0"></iframe>
+	</div>
+	<!-- /video -->
+</div>
+<!-- /video-wrapper -->
+
+
+
+
+</body>
+</html>
